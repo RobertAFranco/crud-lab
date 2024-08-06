@@ -1,0 +1,14 @@
+<body>
+    <h1>Edit <%= dog.name %>
+    <form action="/dogs/<%=dog._id%>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%= dog.name %>" />
+
+        <label for="isReadyToAdopt">Ready to Adopt?</label>
+        <input type="checkbox" name="isReadyToAdopt" <% if (dog.isReadyToAdopt) { %>checked<% } %> >
+
+
+        <button type="submit">Update Dog</button>
+    </form>
+
+</body>
