@@ -72,7 +72,7 @@ app.put("/dogs/:dogId", async (req, res) => {
     await Dog.findByIdAndUpdate(req.params.dogId, req.body);
   
    
-    res.redirect(`/dogs/${req.params.dogIdId}`);
+    res.redirect(`/dogs/${req.params.dogId}`);
   });
   
   
